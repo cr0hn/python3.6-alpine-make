@@ -1,7 +1,7 @@
 FROM python:3-alpine
 
 RUN apk update && apk upgrade && pip install -U pip
-RUN apk add --update alpine-sdk make gcc python3-dev python-dev libxslt-dev libxml2-dev libc-dev openssl-dev libffi-dev zlib-dev py-pip \
+RUN apk add --update alpine-sdk make gcc python3-dev python-dev libxslt-dev libxml2-dev libc-dev openssl-dev libffi-dev zlib-dev py-pip openssh \
     && rm -rf /var/cache/apk/*
 
 RUN set -x \
